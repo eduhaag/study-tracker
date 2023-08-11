@@ -5,35 +5,25 @@
     >
       <img src="../assets/logo.png" alt="" />
       <h1>Vue - Study Timer</h1>
-      <button class="button" @click="handleChangeTheme">
-        {{ buttonText }}
-      </button>
+      <Toggle @toogle-changed="handleChangeTheme" />
     </div>
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Toggle from "./Toggle.vue";
 
 export default defineComponent({
   name: "SideBar",
+  components: {
+    Toggle,
+  },
   emits: ["themeChanged"],
-  data() {
-    return {
-      darkModeActive: false,
-    };
-  },
-  computed: {
-    buttonText() {
-      return this.darkModeActive
-        ? "Desativar modo escuro"
-        : "Ativar modo escuro";
-    },
-  },
+
   methods: {
-    handleChangeTheme() {
-      this.darkModeActive = !this.darkModeActive;
-      this.$emit("themeChanged", this.darkModeActive);
+    handleChangeTheme(isDarkModeActive: boolean) {
+      this.$emit("themeChanged", isDarkModeActive);
     },
   },
 });
