@@ -1,9 +1,14 @@
 <template>
-  <header
-    class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center"
-  >
-    <img src="../assets/logo.png" alt="" />
-    <h1>Vue - Study Timer</h1>
+  <header class="is-flex is-justify-content-center">
+    <div
+      class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center logo"
+    >
+      <img src="../assets/logo.png" alt="" />
+      <h1>Vue - Study Timer</h1>
+      <button class="button" @click="handleChangeTheme">
+        {{ buttonText }}
+      </button>
+    </div>
   </header>
 </template>
 
@@ -12,6 +17,25 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SideBar",
+  emits: ["themeChanged"],
+  data() {
+    return {
+      darkModeActive: false,
+    };
+  },
+  computed: {
+    buttonText() {
+      return this.darkModeActive
+        ? "Desativar modo escuro"
+        : "Ativar modo escuro";
+    },
+  },
+  methods: {
+    handleChangeTheme() {
+      this.darkModeActive = !this.darkModeActive;
+      this.$emit("themeChanged", this.darkModeActive);
+    },
+  },
 });
 </script>
 
@@ -28,14 +52,16 @@ h1 {
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
-  position: fixed;
-  top: 50%;
 }
 
 img {
   max-width: 5rem;
+}
+
+.logo {
   position: fixed;
-  top: 35%;
+  top: 2rem;
+  gap: 1rem;
 }
 
 @media only screen and(max-width: 768px ) {

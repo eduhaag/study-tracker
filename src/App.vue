@@ -1,9 +1,12 @@
 <template>
-  <main class="columns is-gapless is-multiline">
+  <main
+    class="columns is-gapless is-multiline"
+    :class="{ 'dark-mode': isDarkModeActive }"
+  >
     <div class="column is-one-quarter sidebar">
-      <SideBar />
+      <SideBar @theme-changed="changeMode" />
     </div>
-    <div class="column is-three-quarter">
+    <div class="column is-three-quarter content">
       <SectionForm @finish-section="saveSection" />
       <div class="list">
         <Card v-if="isListEmpty">Você ainda não teve estudos hoje :-(</Card>
@@ -36,6 +39,7 @@ export default defineComponent({
   data() {
     return {
       studySections: [] as IStudySection[],
+      isDarkModeActive: false,
     };
   },
   computed: {
@@ -47,6 +51,10 @@ export default defineComponent({
     saveSection(section: IStudySection) {
       this.studySections.push(section);
     },
+
+    changeMode(isDarkModeActive: boolean) {
+      this.isDarkModeActive = isDarkModeActive;
+    },
   },
 });
 </script>
@@ -54,5 +62,21 @@ export default defineComponent({
 <style>
 .list {
   padding: 1.25rem;
+}
+
+main {
+  --bg-primary: #fff;
+  --bg-secundary: #ccf3b6;
+  --text-primary: #666;
+}
+
+main.dark-mode {
+  --bg-primary: #35495e;
+  --bg-secundary: #41b883;
+  --text-primary: #eee;
+}
+
+.content {
+  background-color: var(--bg-primary);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="box has-text-weight-bold">
+  <div class="box has-text-weight-bold study-section">
     <slot></slot>
   </div>
 </template>
@@ -12,8 +12,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.box {
-  background: #ccf3b6;
+<style>
+.study-section {
+  background: var(--bg-secundary);
+  color: var(--text-primary);
 }
 </style>
