@@ -116,9 +116,8 @@ input:checked + label svg.moon {
 input {
   display: none;
 }
-
-input:checked + label {
-  background: #242424;
+g input:checked + label {
+  background: #283b4e;
 }
 
 input:checked + label::after {
