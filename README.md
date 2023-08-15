@@ -13,7 +13,7 @@
 ![Badge de Prs](https://img.shields.io/badge/PRs-Welcome-yellow)
 ![Badge de Licença](https://img.shields.io/badge/licence-MIT-green)
 
-![Badge de status do projeto](https://img.shields.io/badge/PROJETO%20CONCLU%C3%8DDO-darkGreen)
+![Badge de status do projeto](https://img.shields.io/badge/PROJETO_EM_DESENVOLVIMENTO-yellow)
 
  <a href="#-sobre-o-projeto">Sobre</a> •
   <a href="#-funcionalidades">Funcionalidades</a> •
