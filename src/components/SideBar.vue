@@ -4,7 +4,7 @@
       class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center logo"
     >
       <img src="../assets/logo.png" alt="" />
-      <h1>Vue - Study Timer</h1>
+      <h1>Vue - Study Tracker</h1>
       <Toggle @toogle-changed="handleChangeTheme" />
     </div>
   </header>
