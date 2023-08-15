@@ -73,7 +73,7 @@ $ npm run serve
 
 
 **Utilitários**
-- Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**;
+- Editor:  **[Visual Studio Code](package.json)**;
 
 ## 💪 Como contribuir para o projeto
 1. Faça um **fork** do projeto.
