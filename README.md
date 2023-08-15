@@ -69,11 +69,11 @@ $ npm run serve
 - **[Eslint](https://eslint.org/)** - Utilitário de linting;
 - **[Babel](https://babeljs.io/docs/)** - Transpilador Javascript;
 - **[Bulma](https://bulma.io/)** - Framework CSS.
-> Veja o arquivo [package.json](https://github.com/eduhaag/Memoteca/package.json)
+> Veja o arquivo [package.json](package.json)
 
 
 **Utilitários**
-- Editor:  **[Visual Studio Code](package.json)**;
+- Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**;
 
 ## 💪 Como contribuir para o projeto
 1. Faça um **fork** do projeto.
